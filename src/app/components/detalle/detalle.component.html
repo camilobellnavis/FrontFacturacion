@@ -1,0 +1,14 @@
+<div class="mt-3" style="width: 18rem;">
+    <img [src]="img" height="345px" width="320px">
+    <div *ngIf="venta != undefined">
+        <h3>N° de Venta: {{venta.id}}</h3>
+        <h5>N° de Factura: {{venta.id_factura}}</h5>
+        <ul>
+            <li>Id del Producto: {{venta.id_producto}}</li>
+            <li>Precio de Producto:{{venta.precio}}</li>
+            <li>Cantidad Comprada: {{venta.cantidad}}</li>
+            <li>Valor Total: {{venta.importe}}</li>
+
+        </ul>
+    </div>
+</div>

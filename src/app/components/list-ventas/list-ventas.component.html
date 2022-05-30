@@ -1,0 +1,36 @@
+<div class="row mt-3">
+
+    <div class="col-lg-6">
+        <h3>Listado de Ventas</h3>
+    </div>
+
+</div>
+<table class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <td>Numero de Venta</td>
+            <td>Id Factura</td>
+            <td>Id Producto</td>
+            <td>Precio</td>
+            <td>Cantidad Unitaria</td>
+            <td>Importe Total</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let venta of listventas">
+
+            <td>{{venta.id}}</td>
+            <td>{{venta.id_factura}}</td>
+            <td>{{venta.id_producto}}</td>
+            <td>{{venta.precio}}</td>
+            <td>{{venta.cantidad}}</td>
+            <td>{{venta.importe}}</td>
+            <td>
+                <button type="button" [routerLink]="['/venta',venta.id]" class="btn btn-secondary">Volver</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
